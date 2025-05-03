@@ -21,7 +21,11 @@ int main()
     if (std::find(diceTypes, diceTypes + n, diceType) == diceTypes + n) // look for the valid dice type from the first element of array to the last as it looks inclusive at first index but exclusive at last index [indexOne, indexTwo) so it does not reaches + n and + n actually gives us the last index of the array + 1 and if std::find function is equal to it, it means that the number is outside of this array so we write it is invalid. diceTypes => diceTypes + n
     {
         std::cout << "Invalid dice type.\n";
+        std::cout << "Press a key to exit.\n";
         std::cout << "*********** - madeby barlas - ***********";
+        
+        std::cin.ignore();
+        std::cin.get();
         return 1;
     }
     else if (diceType == 100)
@@ -39,7 +43,10 @@ int main()
         result = (rand() % diceType) + 1;
         std::cout << "The result is: " << result << '\n';
     }
+    std::cout << "Press a key to exit.\n";
     std::cout << "*********** - madeby barlas - ***********";
-
+    
+    std::cin.ignore();
+    std::cin.get();
     return 0;
 }
