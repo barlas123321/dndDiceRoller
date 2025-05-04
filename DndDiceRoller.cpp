@@ -43,7 +43,7 @@ int main()
         result = (rand() % diceType) + 1;
         std::cout << "The result is: " << result << '\n';
     }
-    std::cout << "Press a key to exit.\n";
+    std::cout << "Press enter key to exit.\n";
     std::cout << "*********** - madeby barlas - ***********";
     
     std::cin.ignore();
